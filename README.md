@@ -1,26 +1,24 @@
-# Mini-Project-2B
-TE IT Mini Project Sem VI. Students are supposed to upload project source code, project report, final presentation and Gantt chart. 
-Project Group leader is required to fork this repository and do follow steps as followed:
+# Real Time Crop Recommendation
 
-1) Create a new folder by your group number and tittle of project in the format (Group no._ tittle of project) eg. 04_smart home
+# Group Members:
+1.Ishika sharma
+2.Angha Rai
+3.Ruta Rai
 
-2) Add the following things in your folder:
 
-a) Working source code with database backup (Zip file)
+# Project Implementation
+● The website is designed to help the farmers to decide the crops to be 
+cultivated in a p
+● Thus our work will help the farmers in sowing right seed based on soil 
+requirements to increase productivity and acquire profit.
+● The model which is trained with the training data set is tested with inputs from 
+the user in our application. 
+● The scripting done will respond to any test case predicting a crop. If the test 
+case doesn’t match any of the predictions then a try again output is 
+generated.
 
-b) Report soft copy(.pdf)
 
-d) mini project presentations (In both .pdf and .ppt)
+# GUI
+![image](https://user-images.githubusercontent.com/84780456/164991447-50c69c98-0273-4c9b-af5f-c6ac86fef1fb.png)
 
-e) Published papers if any  (.pdf)
 
-f) project gantt chart
-
-g) All Reference Papers (.pdf)
-
-h) Industry project completion letter (if sponsored project) (.pdf)
-
-I) Include Read Me file with: 
-  (i)Title of project. 
-  (ii)Group Members. 
-  (iii)Brief Description about project implementation.
