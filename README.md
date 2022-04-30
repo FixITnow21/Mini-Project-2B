@@ -1,8 +1,8 @@
 # Air Quality Index Prediction
 
 Group Members : 
-Yugandhar Ghatge
-Mayuri Patil
+Yugandhar Ghatge |
+Mayuri Patil |
 Abhijeet Mishra
 
 
