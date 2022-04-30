@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Air Quality Index Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+
+<body class="bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+             <img src="static/img/A.png" width="45" height ="35" style="display: inline-block;">
+                <span style="display: inline-block;">   Air Quality Index Predictor</span>
+             </a>
+
+        </div>
+    </nav>
+
+       <!-- Header -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+    {% block content %} 
+
+    {% endblock %}
+
+</div></div>
+
+
+
+    <!-- Footer -->
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center text-white">
+      <p> APSIT AQI PREDICTOR | ALL RIGHTS RESERVED © </p>
+        </div>
+      </footer>
+</body>
+
+</html>
