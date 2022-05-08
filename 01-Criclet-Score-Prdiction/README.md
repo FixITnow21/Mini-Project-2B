@@ -1,10 +1,6 @@
 # Cricket Score Prdiction
 
-**
-
-#Cricket score prediction is an area where the first innings score of a cricket match is predicted using some techniques
-
-**
+**Cricket score prediction is an area where the first innings score of a cricket match is predicted using some techniques**
 
 
 ## Group Members :-
