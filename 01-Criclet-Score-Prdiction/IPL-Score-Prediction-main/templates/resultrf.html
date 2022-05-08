@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IPL Score Predictor</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='ipl-favicon.ico') }}"
+    />
+    <style type="text/css">
+      body {
+        background: url(https://t3.ftcdn.net/jpg/03/32/65/02/360_F_332650284_TxvQQOCRaXmtgEZQHiW0s7oQXfDjtESD.jpg);
+        background-size: cover;
+      }
+      .register {
+        margin: 0 auto;
+      }
+      .register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #dce35b; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to top,
+          #45b649,
+          #dce35b
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #45b649, #dce35b);
+        box-shadow: 15px 10px 8px #888888;
+      }
+
+      .register .color {
+        position: absolute;
+      }
+
+      #register {
+        text-align: left;
+        margin-right: 100px;
+      }
+      select {
+        /* Reset Select */
+        appearance: none;
+        outline: 0;
+        border: 0;
+        box-shadow: none;
+        /* Personalize */
+        flex: 1;
+        padding: 0 1em;
+        color: white;
+        background-color: #34495e;
+        background-image: none;
+        cursor: pointer;
+        border: 2px solid #34495e;
+      }
+      /* Remove IE arrow */
+      select::-ms-expand {
+        display: none;
+      }
+      /* Custom Select wrapper */
+      .select {
+        position: relative;
+        display: flex;
+        width: 20em;
+        height: 3em;
+        border-radius: 0.25em;
+        overflow: hidden;
+      }
+
+      .select::after {
+        content: "\25BC";
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1em;
+        background-color: #34495e;
+        transition: 0.25s all ease;
+        pointer-events: none;
+      }
+
+      .select:hover::after {
+        color: #f39c12;
+      }
+
+      .custom-select {
+        padding-top: 10px;
+      }
+
+      .form-input {
+        color: white;
+        background-color: #34495e;
+        padding-left: 10px;
+        padding-right: 185px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border: 2px solid #34495e;
+        border-radius: 5px;
+      }
+      .form-input::placeholder {
+        color: #a9a9a9;
+      }
+      .input {
+        padding-top: 10px;
+        display: flex;
+      }
+      .header {
+        padding-bottom: 50px;
+        padding-top: 50px;
+      }
+    </style>
+
+    <script
+      src="https://kit.fontawesome.com/f13b0bc903.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1 class="header" style="text-shadow: 2px 2px 8px white">
+      IPL Batting Score Predictor 🏆
+    </h1>
+
+    <!-- Result -->
+    <div>
+      <div class="register">
+        <center>
+          <p style="font-size: 30px; color: black">
+            The final predicted score (range):<br />
+            {{ lower_limit }} to {{ upper_limit }}
+          </p>
+
+          <br /><br />
+
+          <br /><br />
+        </center>
+      </div>
+      <br /><br /><br />
+      <center></center>
+      <center style="padding-top: 100px">
+        <carousel>
+          <img src="{{ url_for('static', filename= 'mi1.jpg') }}" />
+          <img src="{{ url_for('static', filename= 'srh1.png') }}" />
+          <img src="{{ url_for('static', filename= 'rcb1.png') }}" />
+          <img src="{{ url_for('static', filename= 'dc1.png') }}" />
+          <img src="{{ url_for('static', filename= 'rr1.png') }}" />
+          <img src="{{ url_for('static', filename= 'kkr1.jpg') }}" />
+          <img src="{{ url_for('static', filename= 'kxip1.png') }}" />
+          <img src="{{ url_for('static', filename= 'csk1.png') }}" />
+        </carousel>
+      </center>
+    </div>
+  </body>
+</html>
