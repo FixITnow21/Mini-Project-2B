@@ -1,0 +1,10 @@
+.sidebar {
+  height: auto;
+  width: 20%;
+  padding-top: 20px;
+  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+}
+
+.news-cards {
+  margin-top: -140px;
+}

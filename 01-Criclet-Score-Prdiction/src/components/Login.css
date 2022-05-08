@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+.login-main {
+  background-image: linear-gradient(120deg, #66a6ff 0%, #89f7fe 100%);
+  padding-top: 10vh;
+  padding-bottom: 30vh;
+}
+.login {
+  background-color: white;
+  height: 60vh;
+  width: 65vh !important;
+  display: flex;
+  font-family: "Noto Sans JP", sans-serif;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid lightgray;
+  width: 450px;
+  align-items: center;
+}
+
+.login > h1 {
+  color: darkblue;
+  text-shadow: 2px 2px 4px white;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-top: 60px;
+  font-size: 5vh;
+}
+.login__container {
+  background-image: linear-gradient(120deg, #66a6ff 0%, #89f7fe 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid lightgray;
+}
+
+.login__container > h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.login__container_Input {
+  height: 30px;
+  width: 300px;
+  margin-top: 15px;
+  background-color: lightgrey;
+  border: none;
+  margin-bottom: 10px;
+
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.login__container_Input::after {
+  border: none;
+  outline: none;
+}
+
+.login__container_Input:focus {
+  outline: none;
+}
+
+.login__container > form > h5 {
+  margin-bottom: 5px;
+}
+.login__container > p {
+  margin-top: 12px;
+  font-size: 12px;
+}
+.login__logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 130px;
+  object-fit: contain;
+}
+
+.login__signInButton {
+  width: 100%;
+  padding-left: 20px;
+
+  padding: 10px 0px;
+  margin-top: 10px;
+
+  color: #111;
+}
+.login__registerButton {
+  width: 100%;
+  background: lightgrey;
+
+  padding: 10px 0px;
+  margin-top: 10px;
+  border-color: lightgrey;
+  color: #111;
+}
+
+.tips__textButton {
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+
+  outline: none;
+}
+
+.btn-1 {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0.9rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: relative;
+  outline: none;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn-1::after {
+  content: "➜";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  position: absolute;
+  left: 85%;
+  top: 31%;
+  right: 5%;
+  bottom: 0;
+  opacity: 0;
+  outline: none;
+}
+.btn-1:hover {
+  background: black;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px #00f 61;
+
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.btn-1:hover::after {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.tips__textButton > div > button {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.tips__textButton > div > button:hover {
+  padding-left: 60px;
+  padding-right: 60px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 4px;
+  outline: none;
+}
+
+.login-header {
+  margin-top: 20px;
+  margin-bottom: 20px !important;
+  color: white;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px #000000;
+}
