@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div class="recommenders">
+    <p>Popularity Recommender</p>
+    <div class="recImage">
+      
+    </div>
+  </div>
+  <div class="wrapper">
+    <div >
+      <!-- <button class="search"><i class="fa fa-search"></i></button> -->
+      <input type="text" class="searchbox" id="myInput" placeholder="Search your favourite songs" onkeyup="searchSongs()">
+      
+    </div>
+    <div class="top-bar">
+      <span>Now Playing</span>
+    </div>
+    <div class="img-area">
+      <img src="" alt="">
+    </div>
+    <div class="song-details">
+      <p class="name"></p>
+      <p class="artist"></p>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
+      </div>
+    </div>
+    <div class="controls">
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+      <i id="prev" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
+      </div>
+      <i id="next" class="material-icons">skip_next</i>
+      <i id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class= "list material-icons">queue_music</i>
+          <span>Music list</span>
+        </div>
+        <i id="close" class="material-icons">close</i>
+      </div>
+      <ul id="myUL">
+        <!-- here li list are coming from js -->
+      </ul>
+    </div>
+  </div>
+  <div class="recommenders">
+    Similarity Recommender
+  </div>
+  
+  <script src="js/music-list.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    var filteredMusic= [];
+    const searchSongs = () => {
+      let filter = document.getElementById('myInput').value.toLowerCase();
+      
+      document.getElementById('myUL').innerHTML="";
+      
+      if(filter!="")filteredMusic= allMusic.filter(music => music.name.toLowerCase().includes(filter))
+      else filteredMusic= allMusic
+      const ulTag = wrapper.querySelector("ul");
+      // let create li tags according to array length for list
+      for (let i = 0; i < filteredMusic.length; i++) {
+        //let's pass the song name, artist from the array
+        let liTag = `<li li-index="${i + 1}">
+                      <div class="row">
+                        <span>${filteredMusic[i].name}</span>
+                        <p>${filteredMusic[i].artist}</p>
+                      </div>
+                      <span id="${filteredMusic[i].src}" class="audio-duration">3:40</span>
+                      <audio class="${filteredMusic[i].src}" src="songs/${filteredMusic[i].src}.mp3"></audio>
+                    </li>`;
+        ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
+
+        let liAudioDuartionTag = ulTag.querySelector(`#${filteredMusic[i].src}`);
+        let liAudioTag = ulTag.querySelector(`.${filteredMusic[i].src}`);
+        liAudioTag.addEventListener("loadeddata", ()=>{
+          let duration = liAudioTag.duration;
+          let totalMin = Math.floor(duration / 60);
+          let totalSec = Math.floor(duration % 60);
+          if(totalSec < 10){ //if sec is less than 10 then add 0 before it
+            totalSec = `0${totalSec}`;
+          };
+          liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
+          liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
+        });
+      }
+      playingSong(); 
+    }
+  </script>
+
+</body>
+</html>
