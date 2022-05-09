@@ -2,9 +2,11 @@
 
 ### Group Members
 
+```
 1. Keval Gada - 20204002
 2. Aadarsh Khant - 20204003
 3. Tanay Jain - 20204004
+```
 
 ### About & Purpose
 
